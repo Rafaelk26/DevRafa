@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Font Readex Pro */
+
+@font-face {
+    font-family: 'Readex Pro';
+    src: url('/fonts/Readex_Pro/ReadexPro-VariableFont_HEXP,wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Readex Pro Bold';
+    src: url('/fonts/Readex_Pro/static/ReadexPro-Bold.ttf') format('truetype');
+}
+
+
+/* Font Inter */
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter Regular';
+    src: url('/fonts/Inter/static/Inter-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter Semibold';
+    src: url('/fonts/Inter/static/Inter-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter Bold';
+    src: url('/fonts/Inter/static/Inter-Bold.ttf') format('truetype');
+}
+
+
+/* Class from import fonts */
+
+.readex {
+    font-family: 'Readex Pro', sans-serif;
+}
+
+.readex-bold {
+    font-family: 'Readex Pro Bold', sans-serif;
+}
+
+.inter {
+    font-family: 'Inter', sans-serif;
+}
+
+.inter-regular {
+    font-family: 'Inter Regular', sans-serif;
+}
+
+.inter-semibold {
+    font-family: 'Inter Semibold', sans-serif;
+}
+
+.inter-bold {
+    font-family: 'Inter Bold', sans-serif;
+}
+
+/* Background default body */
+
+body{
+    background-color: black;
+}
+
+/* Animations Menu Mobile */
+
+@keyframes slide-in-right {
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-out-right {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100vw);
+    }
+}
+
+.slide-in-right {
+    animation: slide-in-right 0.5s forwards;
+}
+
+.slide-out-right {
+    animation: slide-out-right 0.5s forwards;
+}
+
+
+/* Animations link nav */
+
+.nav-link {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.2s ease-in-out;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
