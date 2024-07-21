@@ -1,0 +1,80 @@
+/* Padrão para telas grandes lg: */
+.cards-animate {
+    transition: right 0.5s ease, transform 0.5s ease;
+    position: absolute;
+    bottom: 5em;
+    right: 10em;
+}
+
+.cards-animate:nth-child(1) {
+    right: 0em;
+}
+
+.cards-animate:nth-child(2) {
+    right: 1.0em;
+}
+
+.cards-animate:nth-child(3) {
+    right: 1.5em;
+}
+
+.cards-animate:nth-child(4) {
+    right: 2em;
+}
+
+/* Estilo do card com o foco nele para apresentação */
+.cards-animate.active {
+    z-index: 20;
+    transform: scale(1.1);
+    right: 3.5em;
+}
+
+/* Padrão para telas médias md: */
+@media (max-width: 1024px) {
+    .slider-show {
+        height: 50em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .cards-animate {
+        position: absolute;
+        bottom: 5em;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        /* Ajuste conforme necessário */
+        right: auto;
+        /* Remover a posição direita para centralizar horizontalmente */
+    }
+
+    .cards-animate.active {
+        z-index: 20;
+        transform: scale(1.1) translateX(-50%);
+        left: 50%;
+        right: auto;
+    }
+
+    .part-1 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        text-align: center;
+        top: 10px;
+    }
+
+    .button-nav {
+        position: absolute;
+        bottom: 2em;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        z-index: 50;
+    }
+}

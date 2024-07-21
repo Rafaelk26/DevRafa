@@ -69,7 +69,7 @@ export function Show() {
                             </p>
                         )}
                     </div>
-                    <div className='w-full mt-3 flex gap-3 justify-center
+                    <div className='w-full mt-3 flex gap-4 justify-center
                     sm:justify-start
                     md:justify-start'>
                         <FaLinkedin
